@@ -32,7 +32,7 @@ from(".child span", {
     x: 100,
     delay: 1,
     stagger: 0.2,
-    duration: 2,
+    duration: 1.2,
     ease: Power3.easeInOut,
 })
 .to(".parent .child", {
@@ -43,17 +43,20 @@ from(".child span", {
     .to("#loader",{
     height: 0,
     duration:1,
-    ease: Expo.easeInOut,
+    ease: Circ.easeInOut,
     })
     .to("#green-screen",{
     height: "100vh",
-    duration:2,
-    delay: -2,
-    ease: Expo.easeInOut,
+    top: 0,
+    duration:0.5,
+    delay: -1,
+    ease: Circ.easeInOut,
     })
-    .to("#white-screen",{
-    height: "100vh",
-    duration:2,
-    delay: -1.8,
-    ease: Expo.easeInOut,
+    .to("#green-screen",{
+        height: 0,
+        top: 0,
+        duration:0.5,
+        delay: -0.6,
+        ease: Circ.easeInOut,
     })
+    
