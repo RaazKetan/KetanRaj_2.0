@@ -15,7 +15,7 @@ document.querySelectorAll(".reveal")
     child.classList.add("child");   
 
     //span parents gets child and child gets elem detials
-    child.textContent = elem.textContent;
+    child.innerHTML = elem.innerHTML;
     parent.appendChild(child); 
 
     //elem replaces its value with the parent span
@@ -25,17 +25,24 @@ document.querySelectorAll(".reveal")
 }
 revealToSpan();
 
-gsap.to(".parent .child", {
-    y: "-100%",
-    duration: 1,
-    delay: 0.4,
-    ease: Expo.easeInOut,
-})
 
-tl
+
+tl. 
+from(".child span", {
+    x: 100,
+    delay: 1,
+    stagger: 0.2,
+    duration: 2,
+    ease: Power3.easeInOut,
+})
+.to(".parent .child", {
+    y: "-100%",
+    duration: 0.5,
+    ease: Power3.easeInOut,
+})
     .to("#loader",{
     height: 0,
-    duration:2,
+    duration:1,
     ease: Expo.easeInOut,
     })
     .to("#green-screen",{
