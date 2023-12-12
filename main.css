@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    /* font-family: GothamPro; */
+    font-family: 'Gilroy';
+    /* background-color: #FCFAF8; */
+}
+@font-face {
+  font-family: 'Kantata Aksara';
+  src: url(KantataAksara.ttf);
+}
+
+#main{
+  position: relative;
+  background-color: #FCFAF8;
+  width: 100vw;
+  height: 100vh;
+}
+#loader{
+  width: 100vw;
+  height: 100vh;
+  background-color: #1A1A1A;
+  
+}
+#loader>#topHeading{
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+}
+#topHeading h5{
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 100;
+  font-size: 0.5em;
+  color: #FCFAF8;
+}
+#loader h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  font-size: 4vw;
+  font-weight: 500;
+  color: #FCFAF8;
+}
+.reveal .parent{
+  display: block;
+  /* background-color: red; */
+  overflow: hidden;
+}
+.reveal .parent .child{
+  display: block;
+  /* transform: translateY(-80%); */
+}
+#green-screen{
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  height:0vh;
+  background-color: #14CF93;
+}
+#white-screen{
+  width: 100vw;
+  height: 0;
+  position: absolute;
+  bottom: 0;
+  background-color: #FCFAF8;
+}
+
