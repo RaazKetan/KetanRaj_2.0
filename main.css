@@ -16,6 +16,7 @@
   height: 100vh;
 }
 #loader{
+  display: none;
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -70,16 +71,59 @@
  color: #14CF93;
 }
 #green-screen{
+  display: none;
   width: 100vw;
   position: absolute;
   bottom: 0;
-  /* height:0vh; */
+  height: 0vh;
   background-color: #14CF93;
 }
 
 #home{
- width: 100vw;
- height: 100vh;
+ /* width: 100vw; */
+ height: 100vh; 
+
  background-color: #FCFAF8;
 
 }
+#home #nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 5vw;
+  /* width: 100vw; */
+  height: 15vh;
+}
+#nav a{
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
+  font-size: 0.8em;
+  color: #1A1A1A;
+}
+#nav a .line{
+  position: absolute;
+  bottom: 0;
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: #1A1A1A;
+}
+#line1{
+  left: 0;
+  width: 0%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  transition-delay: 0.2s;
+}
+#line2{
+  right: 0;
+  width: 100%;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#nav a :hover #line2{
+    width: 0%;
+  }
+#nav a :hover #line1{
+  width: 100%;
+}  

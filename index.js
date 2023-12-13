@@ -47,13 +47,12 @@ from(".child span", {
     })
     .to("#green-screen",{
     height: "100vh",
-    top: 0,
     duration:0.5,
     delay: -1,
     ease: Circ.easeInOut,
     })
     .to("#green-screen",{
-        height: 0,
+        height: "0vh",
         top: 0,
         duration:0.5,
         delay: -0.6,
