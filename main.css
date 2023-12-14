@@ -6,7 +6,7 @@
 }
 @font-face {
 font-family: 'Kantata Aksara';
-src: url(KantataAksara.ttf);
+src: url(Assests/Fonts/KantataAksara.ttf);
 }
 
 #main{
@@ -201,24 +201,40 @@ stroke: #14CF93;
   align-items: center;
   justify-content: center;
   height: auto;
-  width: 60%;
+  width: 80%;
   /* background-color: yellow; */
   /* height: 300px; */
 
 }
 #imgrig .imgcntnr{
   position: absolute;
-  width: 30vw;
-  height: 45vw;
+  width: 27vw;
+  height: 40vw;
   border-radius: 1vw;
-  background-color: red;
+  filter: grayscale();
+  /* background-color: red; */
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+#imgrig .imgcntnr:hover{
+  filter: grayscale(0);
 }
 #imgrig .imgcntnr:nth-child(1){
   transform: translate(-20%, -8%) rotate(-20deg);
+  background-image: url(Assests/Images/mobile\ \(2\).png);
+  background-size: cover;
+  background-position: center;
 }
 #imgrig .imgcntnr:nth-child(2){
   transform: translate(0%, 0%) rotate(-15deg);
+  background-image: url(Assests/Images/mobile\ \(1\).png);
+  background-size: cover;
+  background-position: center;
+  
 }
 #imgrig .imgcntnr:nth-child(3){
   transform: translate(20%, 10%) rotate(-5deg);
+  background-image: url(Assests/Images/mobile.png);
+  background-size:contain;
+  background-position: center;
+
 }
