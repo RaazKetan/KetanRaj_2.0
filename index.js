@@ -1,30 +1,29 @@
 // import gsap from "gsap";    
-var tl = gsap.timeline();
-
 
 function revealToSpan(){
-document.querySelectorAll(".reveal")
-.forEach((elem) => {
-    //create two spans
-    var parent = document.createElement("span");
-    var child = document.createElement("span");
-
-    //parent and child both gets theit respective classes
-
-    parent.classList.add("parent");
-    child.classList.add("child");   
-
-    //span parents gets child and child gets elem detials
-    child.innerHTML = elem.innerHTML;
-    parent.appendChild(child); 
-
-    //elem replaces its value with the parent span
-    elem.innerHTML = "";    
-    elem.appendChild(parent);  
-});
+    document.querySelectorAll(".reveal")
+    .forEach((elem) => {
+        //create two spans
+        var parent = document.createElement("span");
+        var child = document.createElement("span");
+        
+        //parent and child both gets theit respective classes
+        
+        parent.classList.add("parent");
+        child.classList.add("child");   
+        
+        //span parents gets child and child gets elem detials
+        child.innerHTML = elem.innerHTML;
+        parent.appendChild(child); 
+        
+        //elem replaces its value with the parent span
+        elem.innerHTML = "";    
+        elem.appendChild(parent);  
+    });
 }
-revealToSpan();
 
+function loaderAnimation(){
+var tl = gsap.timeline();
 
 
 tl. 
@@ -58,4 +57,29 @@ from(".child span", {
         delay: -0.6,
         ease: Circ.easeInOut,
     })
-    
+}
+
+function animateSVG(){
+    document.querySelectorAll("#Visual>g").forEach(function(e) {
+        let character =  e.childNodes[1].childNodes[0]; 
+        // Access the correct child node
+      
+        if (character instanceof SVGGeometryElement) {
+            // The character object is an SVGGeometryElement, so we can call the getTotalLength() method.
+            character.style.strokeDasharray = character.getTotalLength()+'px';
+            character.style.strokeDashoffset = character.getTotalLength() + 'px';
+        }
+        
+    })
+    gsap.to("#Visual>g>g>path, #Visual>g>g>polyline ",{
+        strokeDashoffset: 0,
+        duration: 2,
+        stagger: 0.2,
+        ease: Expo.easeInOut,
+        delay: 2.7,
+    })
+   
+}
+revealToSpan();
+loaderAnimation();
+animateSVG();

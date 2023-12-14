@@ -16,7 +16,8 @@
   height: 100vh;
 }
 #loader{
-  display: none;
+  /* display: none; */
+  z-index: 9999;
   position: absolute;
   width: 100vw;
   height: 100vh;
@@ -71,10 +72,11 @@
  color: #14CF93;
 }
 #green-screen{
-  display: none;
+  /* display: none; */
   width: 100vw;
   position: absolute;
   bottom: 0;
+  z-index: 999;
   height: 0vh;
   background-color: #14CF93;
 }
@@ -143,7 +145,7 @@
   font-weight: 600;
 }
 .row .text{
-  margin-top: 5vw;
+  /* margin-top: 0vw; */
   text-transform: uppercase;
 
 }
@@ -161,4 +163,7 @@
   /* color: #14CF93; */
   height: 9vw;
   margin: 0 4vw;
+}
+path , polyline{
+  stroke: #14CF93;
 }
