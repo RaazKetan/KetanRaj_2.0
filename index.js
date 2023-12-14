@@ -81,5 +81,5 @@ function animateSVG(){
    
 }
 revealToSpan();
-loaderAnimation();
+// loaderAnimation();
 animateSVG();

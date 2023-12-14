@@ -1,169 +1,224 @@
 *{
-    margin: 0;
-    padding: 0;
-    /* font-family: GothamPro; */
-    font-family: 'Gilroy';
+  margin: 0;
+  padding: 0;
+  /* font-family: GothamPro; */
+  font-family: 'Gilroy';
 }
 @font-face {
-  font-family: 'Kantata Aksara';
-  src: url(KantataAksara.ttf);
+font-family: 'Kantata Aksara';
+src: url(KantataAksara.ttf);
 }
 
 #main{
-  position: relative;
-  background-color: #FCFAF8;
-  width: 100vw;
-  height: 100vh;
+position: relative;
+background-color: #FCFAF8;
+width: 100vw;
+height: 100vh;
+overflow-x: hidden;
 }
 #loader{
-  /* display: none; */
-  z-index: 9999;
-  position: absolute;
-  width: 100vw;
-  height: 100vh;
-  background-color: #1A1A1A;
-  
+display: none;
+z-index: 9999;
+position: absolute;
+width: 100vw;
+height: 100vh;
+background-color: #1A1A1A;
+
 }
 #loader>#topHeading{
-  position: absolute;
-  top: 5%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+position: absolute;
+top: 5%;
+left: 50%;
+transform: translate(-50%, -50%);
 
 }
 #topHeading h5{
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 100;
-  font-size: 0.5em;
-  color: #FCFAF8;
+text-align: center;
+text-transform: uppercase;
+font-weight: 100;
+font-size: 0.5em;
+color: #FCFAF8;
 }
 #loader h1{
-  /* overflow-y: hidden; */
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* text-transform: uppercase; */
-  font-size: 4vw;
-  font-weight: 500;
-  color: #FCFAF8;
+/* overflow-y: hidden; */
+width: 100vw;
+display: flex;
+justify-content: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+/* text-transform: uppercase; */
+font-size: 4vw;
+font-weight: 500;
+color: #FCFAF8;
 }
 .reveal .parent{
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  /* background-color: red; */
-  overflow-y: hidden;
+display: flex;
+justify-content: center;
+width: 100vw;
+/* background-color: red; */
+overflow-y: hidden;
 }
 .reveal .parent .child{
-  display: block;
-  /* transform: translateY(-80%); */
+display: block;
+/* transform: translateY(-80%); */
 }
- .parent .child span{
-  /* color: ; */
-  display: inline-block;
+.parent .child span{
+/* color: ; */
+display: inline-block;
 }
 .reveal .parent .child span:nth-child(2){
-  font-family: 'Kantata Aksara';
- color: #14CF93;
+font-family: 'Kantata Aksara';
+color: #14CF93;
 }
 #green-screen{
-  /* display: none; */
-  width: 100vw;
-  position: absolute;
-  bottom: 0;
-  z-index: 999;
-  height: 0vh;
-  background-color: #14CF93;
+display: none;
+width: 100vw;
+position: absolute;
+bottom: 0;
+z-index: 999;
+height: 0vh;
+background-color: #14CF93;
 }
 
 #home{
- /* width: 100vw; */
- height: 100vh; 
+/* width: 100vw; */
+height: 150vh; 
 
- background-color: #FCFAF8;
+background-color: #FCFAF8;
 
 }
 #home #nav{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 5vw;
-  /* width: 100vw; */
-  height: 15vh;
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 0 5vw;
+/* width: 100vw; */
+height: 15vh;
 }
 #nav a{
-  position: relative;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 300;
-  font-size: 0.8em;
-  color: #1A1A1A;
+position: relative;
+text-decoration: none;
+text-transform: uppercase;
+font-weight: 300;
+font-size: 0.8em;
+color: #1A1A1A;
 }
 #nav a .line{
-  position: absolute;
-  bottom: 0;
-  display: inline-block;
-  width: 100%;
-  height: 1px;
-  background-color: #1A1A1A;
+position: absolute;
+bottom: 0;
+display: inline-block;
+width: 100%;
+height: 1px;
+background-color: #1A1A1A;
 }
 #line1{
-  left: 0;
-  width: 0%;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
-  transition-delay: 0.2s;
+left: 0;
+width: 0%;
+transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+transition-delay: 0.2s;
 }
 #line2{
-  right: 0;
-  width: 100%;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+right: 0;
+width: 100%;
+transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 #nav a :hover #line2{
-    width: 0%;
-  }
+  width: 0%;
+}
 #nav a :hover #line1{
-  width: 100%;
+width: 100%;
 }  
 
 .row{
-  margin-top: 1vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #333;
-  /* width: 100vw; */
-  padding: 0 7vw;
-  padding-right: 7vw;
+margin-top: 1vw;
+display: flex;
+align-items: center;
+justify-content: space-between;
+color: #333;
+/* width: 100vw; */
+padding: 0 7vw;
+padding-right: 7vw;
 }
 .row h1{
-  font-size:12vw;
-  font-weight: 600;
+font-size:12vw;
+font-weight: 600;
 }
 .row .text{
-  /* margin-top: 0vw; */
-  text-transform: uppercase;
+/* margin-top: 0vw; */
+text-transform: uppercase;
 
 }
 .row h5{
-  opacity: .4;
-  font-size: 0.8vw;
-  font-weight: 800;
+opacity: .4;
+font-size: 0.8vw;
+font-weight: 800;
 }
 
 .row:nth-child(2){
-  margin-top: 3vw;
+margin-top: 3vw;
 }
 
 .row svg{
-  /* color: #14CF93; */
-  height: 9vw;
-  margin: 0 4vw;
+/* color: #14CF93; */
+height: 9vw;
+margin: 0 4vw;
 }
 path , polyline{
-  stroke: #14CF93;
+stroke: #14CF93;
+}
+
+#imagery{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20vw;
+  width: 100%;
+  padding: 0 7vw;
+}
+#imagery #imglef{
+  width: 30%;
+  height: auto;
+}
+#imglef h1{
+  /* text-transform: uppercase; */
+  /* letter-spacing: 1px; */
+  font-weight:500;
+  font-size: 2.5vw;
+  color: #333;
+}
+#imglef h1 span{
+  color: #14CF93;
+  font-family: 'Kantata Aksara';
+  font-weight: 100;
+  font-style: italic;
+}
+
+#imgrig{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+  width: 60%;
+  /* background-color: yellow; */
+  /* height: 300px; */
+
+}
+#imgrig .imgcntnr{
+  position: absolute;
+  width: 30vw;
+  height: 45vw;
+  border-radius: 1vw;
+  background-color: red;
+}
+#imgrig .imgcntnr:nth-child(1){
+  transform: translate(-20%, -8%) rotate(-20deg);
+}
+#imgrig .imgcntnr:nth-child(2){
+  transform: translate(0%, 0%) rotate(-15deg);
+}
+#imgrig .imgcntnr:nth-child(3){
+  transform: translate(20%, 10%) rotate(-5deg);
 }
