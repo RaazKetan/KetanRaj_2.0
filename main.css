@@ -17,7 +17,7 @@ height: 100vh;
 overflow-x: hidden;
 }
 #loader{
-display: none;
+/* display: none; */
 z-index: 9999;
 position: fixed;
 width: 100vw;
@@ -73,7 +73,7 @@ font-family: 'Kantata Aksara';
 color: #14CF93;
 }
 #green-screen{
-display: none;
+/* display: none; */
 width: 100vw;
 position: absolute;
 bottom: 0;
@@ -323,4 +323,71 @@ stroke: #14CF93;
 }
 .cnt2{
   width: 30%;
+}
+#cursor{
+  position: fixed;
+  width: 17vw;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+#cursor>div{
+  opacity: 1;
+  position: absolute;
+}
+#elem{
+  width: 100%;
+  position: relative;
+}
+#cursor .crow{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: .7vw;
+}
+.crow .ccircle{
+  width: 2vw;
+  height: 2vw;
+  border:2px solid #fff;
+  border-radius: 50%;
+  background-color: #14CF93;
+}
+
+.crow .ccapsule{
+  padding: .7vw 3vw;
+  border-radius: 100px;
+  background-color: #fff;
+}
+#elem img{
+  width: 100%;
+  opacity: 0;
+  animation: an 4s linear infinite;
+  position: absolute;
+}
+#elem img:nth-child(2){
+  animation-delay: 1s;
+}
+#elem img:nth-child(3){
+  animation-delay: 2s;
+}
+#elem img:nth-child(4){
+  animation-delay: 3s;
+}
+#elem img:nth-child(5){
+  animation-delay: 4s;
+}
+@keyframes an{
+  0%{
+    opacity: 0;
+  }
+  20%{
+    opacity: 1;
+  }
+  80%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
 }

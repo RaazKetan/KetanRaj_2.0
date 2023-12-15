@@ -87,7 +87,16 @@ function locoIntialize(){
         direction: 'vertical',
     });
 }
+
+// function cardShow(){
+//     document.querySelectorAll(".cnt").forEach(function(cnt){
+//         cnt.addEventListener("mouseover", function(dets){
+//             console.log(dets.target);
+//         })
+//     })
+// }
 revealToSpan();
 loaderAnimation();
 animateSVG();
 locoIntialize();
+// cardShow();
