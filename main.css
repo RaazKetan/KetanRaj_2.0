@@ -17,11 +17,12 @@ height: 100vh;
 /* overflow-x: hidden; */
 }
 #loader{
-/* display: none; */
-z-index: 9999;
+  /* display: none; */
+  z-index: 9999;
 position: fixed;
 width: 100vw;
 height: 100vh;
+/* overflow-x: hidden; */
 background-color: #1A1A1A;
 
 }
@@ -85,7 +86,7 @@ background-color: #14CF93;
 #home{
 /* width: 100vw; */
 height: 150vh; 
-
+overflow-x: hidden;
 background-color: #FCFAF8;
 
 }
