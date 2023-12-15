@@ -17,7 +17,7 @@ height: 100vh;
 overflow-x: hidden;
 }
 #loader{
-display: none;
+/* display: none; */
 z-index: 9999;
 position: fixed;
 width: 100vw;
@@ -73,7 +73,7 @@ font-family: 'Kantata Aksara';
 color: #14CF93;
 }
 #green-screen{
-display: none;
+/* display: none; */
 width: 100vw;
 position: absolute;
 bottom: 0;
@@ -298,4 +298,27 @@ stroke: #14CF93;
 }
 .o-ui-arrow path{
   stroke: #4f4f4f65;
+}
+#images{
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-top: 6vw;
+  position: relative;
+  width: 100%;
+  padding: 0 5vw;
+
+}
+.cnt{
+  overflow: hidden;
+  border-radius:8%;
+}
+.cnt img{
+  width: 105%;
+}
+.cnt1{
+  width: 55%;
+}
+.cnt2{
+  width: 35%;
 }

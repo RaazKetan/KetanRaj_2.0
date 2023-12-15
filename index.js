@@ -80,6 +80,13 @@ function animateSVG(){
     })
    
 }
+function locoIntialize(){
+    const scroll = new LocomotiveScroll({
+        el: document.querySelector('#main'),
+        smooth: true
+    });
+}
 revealToSpan();
-// loaderAnimation();
+loaderAnimation();
 animateSVG();
+locoIntialize();
