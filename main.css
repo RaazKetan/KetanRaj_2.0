@@ -14,7 +14,7 @@ position: relative;
 background-color: #FCFAF8;
 width: 100vw;
 height: 100vh;
-overflow-x: hidden;
+/* overflow-x: hidden; */
 }
 #loader{
 /* display: none; */
