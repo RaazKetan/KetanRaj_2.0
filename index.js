@@ -83,7 +83,8 @@ function animateSVG(){
 function locoIntialize(){
     const scroll = new LocomotiveScroll({
         el: document.querySelector('#main'),
-        smooth: true
+        smooth: true,
+        direction: 'vertical',
     });
 }
 revealToSpan();
