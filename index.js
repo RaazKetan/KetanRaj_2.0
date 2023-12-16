@@ -84,19 +84,34 @@ function locoIntialize(){
     const scroll = new LocomotiveScroll({
         el: document.querySelector('#main'),
         smooth: true,
-        direction: 'vertical',
+        // direction: 'vertical',
+        // speed:-1,
+        delay: 1,
     });
 }
 
-// function cardShow(){
-//     document.querySelectorAll(".cnt").forEach(function(cnt){
-//         cnt.addEventListener("mouseover", function(dets){
-//             console.log(dets.target);
-//         })
-//     })
-// }
+function cardHoverEffect(){
+    document.querySelectorAll(".cnt").forEach(function(cnt){
+        var showingImage;
+        cnt.addEventListener("mousemove", function(dets){
+            document.querySelector("#cursor").children[dets.target.dataset.index].style.opacity = 1;
+            showingImage = dets.target;
+
+           
+                document.querySelector("#cursor").children[dets.target.dataset.index].style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
+                
+            showingImage.style.filter = "grayscale(1)";
+            document.querySelector("#work").style.backgroundColor = "#"+dets.target.dataset.color;
+        })
+        cnt.addEventListener("mouseleave", function(dets){
+            document.querySelector("#cursor").children[showingImage.dataset.index].style.opacity = 0;
+            showingImage.style.filter = "grayscale(0)";
+            document.querySelector("#work").style.backgroundColor = "#fff";
+        })
+    })
+}
 revealToSpan();
 loaderAnimation();
 animateSVG();
 locoIntialize();
-// cardShow();
+cardHoverEffect();

@@ -14,7 +14,7 @@ position: relative;
 background-color: #FCFAF8;
 width: 100vw;
 height: 100vh;
-/* overflow-x: hidden; */
+overflow-x: hidden;
 }
 #loader{
   /* display: none; */
@@ -22,7 +22,6 @@ height: 100vh;
 position: fixed;
 width: 100vw;
 height: 100vh;
-/* overflow-x: hidden; */
 background-color: #1A1A1A;
 
 }
@@ -86,7 +85,7 @@ background-color: #14CF93;
 #home{
 /* width: 100vw; */
 height: 150vh; 
-overflow-x: hidden;
+/* overflow-x: hidden; */
 background-color: #FCFAF8;
 
 }
@@ -243,8 +242,9 @@ stroke: #14CF93;
 }
 #work{
   padding: 150px;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
   position: relative;
-  min-height: 70vh;
+  /* min-height: 100vh; */
   background-color: #F2F2F2;
 }
 #work::before{
@@ -316,6 +316,7 @@ stroke: #14CF93;
 }
 .cnt img{
   /* object-fit: cover; */
+  transition: filter cubic-bezier(0.19, 1, 0.22, 1) 1.5s;
   width: 100%;
   /* border-radius: 8%; */
 }
@@ -326,14 +327,16 @@ stroke: #14CF93;
   width: 30%;
 }
 #cursor{
-  position: fixed;
+  position:absolute;
   width: 17vw;
   top: 0;
   left: 0;
   z-index: 999;
 }
 #cursor>div{
-  opacity: 1;
+  pointer-events: none;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+  opacity: 0;
   position: absolute;
 }
 #elem{
@@ -380,13 +383,19 @@ stroke: #14CF93;
 }
 @keyframes an{
   0%{
-    opacity: 0;
+    opacity: 1;
   }
   20%{
     opacity: 1;
   }
-  80%{
+  40%{
     opacity: 1;
+  }
+  60%{
+    opacity: 0;
+  }
+  80%{
+    opacity: 0;
   }
   100%{
     opacity: 0;
