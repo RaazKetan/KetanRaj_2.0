@@ -1,5 +1,5 @@
 // import gsap from "gsap";    
-
+gsap.registerPlugin(ScrollTrigger);
 function revealToSpan(){
     document.querySelectorAll(".reveal")
     .forEach((elem) => {
@@ -90,28 +90,33 @@ function locoIntialize(){
     });
 }
 
-function cardHoverEffect(){
-    document.querySelectorAll(".cnt").forEach(function(cnt){
-        var showingImage;
-        cnt.addEventListener("mousemove", function(dets){
-            document.querySelector("#cursor").children[dets.target.dataset.index].style.opacity = 1;
-            showingImage = dets.target;
+// function cardHoverEffect(){
+//     document.querySelectorAll(".cnt").forEach(function(cnt){
+//         var showingImage;
+//         cnt.addEventListener("mousemove", function(dets){
+//             // console.log(dets.target.dataset.index);
+//             document.querySelector("#cursor").children[dets.target.dataset.index].style.opacity = 1;
+//             showingImage = dets.target;
 
            
-                document.querySelector("#cursor").children[dets.target.dataset.index].style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
+//                 document.querySelector("#cursor").children[dets.target.dataset.index].style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
+
+//                 // console.log(dets.clientX, dets.clientY);
                 
-            showingImage.style.filter = "grayscale(1)";
-            document.querySelector("#work").style.backgroundColor = "#"+dets.target.dataset.color;
-        })
-        cnt.addEventListener("mouseleave", function(dets){
-            document.querySelector("#cursor").children[showingImage.dataset.index].style.opacity = 0;
-            showingImage.style.filter = "grayscale(0)";
-            document.querySelector("#work").style.backgroundColor = "#fff";
-        })
-    })
-}
+//             showingImage.style.filter = "grayscale(1)";
+//             document.querySelector("#work").style.backgroundColor = "#"+dets.target.dataset.color;
+//         })
+//         cnt.addEventListener("mouseleave", function(dets){
+//             document.querySelector("#cursor").children[showingImage.dataset.index].style.opacity = 0;
+//             showingImage.style.filter = "grayscale(0)";
+//             document.querySelector("#work").style.backgroundColor = "#fff";
+//         })
+//     })
+// }
+
+
 revealToSpan();
-loaderAnimation();
+// loaderAnimation();
 animateSVG();
 locoIntialize();
 cardHoverEffect();
