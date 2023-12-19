@@ -17,7 +17,7 @@ height: 100vh;
 overflow-x: hidden;
 }
 #loader{
-  display: none;
+  /* display: none; */
   z-index: 9999;
 position: fixed;
 width: 100vw;
@@ -73,7 +73,7 @@ font-family: 'Kantata Aksara';
 color: #14CF93;
 }
 #green-screen{
-display: none;
+/* display: none; */
 width: 100vw;
 position: absolute;
 bottom: 0;

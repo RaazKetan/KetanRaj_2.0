@@ -116,7 +116,7 @@ function locoIntialize(){
 
 
 revealToSpan();
-// loaderAnimation();
+loaderAnimation();
 animateSVG();
 locoIntialize();
 cardHoverEffect();
