@@ -119,4 +119,4 @@ revealToSpan();
 loaderAnimation();
 animateSVG();
 locoIntialize();
-cardHoverEffect();
+// cardHoverEffect();
