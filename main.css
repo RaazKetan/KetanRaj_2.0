@@ -171,9 +171,7 @@ stroke: #14CF93;
 
 #imagery{
   display: flex;
-  align-items: center;
-  /* justify-content: space-between; */
-  /* margin-top: 12vw; */
+  margin-top: 8vw;
   width: 100%;
   padding: 7vw 7vw;
 }
@@ -204,6 +202,7 @@ stroke: #14CF93;
   justify-content: center;
   height: auto;
   width: 100%;
+  z-index: 2;
   /* background-color: yellow; */
   /* height: 300px; */
 
@@ -222,7 +221,7 @@ flex-direction: column;
 }
 .tech-icon{
   align-items: center;
-  width: 60%;
+  width: 30%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -231,8 +230,13 @@ flex-direction: column;
 }
 .tech-icon>svg{
   margin: 0.5vw 1vw;
-  height: 7vh;
+  width: 20%;
   fill: #333;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+.tech-icon>svg:hover{
+  width: 21%;
+  fill: #14CF93;
 }
 
 #work{
