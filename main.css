@@ -208,40 +208,8 @@ stroke: #14CF93;
   /* height: 300px; */
 
 }
-#imgrig .imgcntnr{
-  position: absolute;
-  width: 27vw;
-  height: 40vw;
-  z-index: 2;
-  border-radius: 1vw;
-  filter: grayscale();
-  /* background-color: red; */
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
-}
-#imgrig .imgcntnr:hover{
-  filter: grayscale(0);
-  scale: 1.1;
-}
-#imgrig .imgcntnr:nth-child(1){
-  transform: translate(-20%, -8%) rotate(-20deg);
-  background-image: url(Assests/Images/mobile\ \(2\).png);
-  background-size: cover;
-  background-position: center;
-}
-#imgrig .imgcntnr:nth-child(2){
-  transform: translate(0%, 0%) rotate(-15deg);
-  background-image: url(Assests/Images/mobile\ \(1\).png);
-  background-size: cover;
-  background-position: center;
-  
-}
-#imgrig .imgcntnr:nth-child(3){
-  transform: translate(20%, 10%) rotate(-5deg);
-  background-image: url(Assests/Images/mobile.png);
-  background-size:contain;
-  background-position: center;
 
-}
+
 #work{
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
   position: relative;
