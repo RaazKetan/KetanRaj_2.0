@@ -172,8 +172,8 @@ stroke: #14CF93;
 #imagery{
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 17vw;
+  /* justify-content: space-between; */
+  /* margin-top: 12vw; */
   width: 100%;
   padding: 7vw 7vw;
 }
@@ -203,12 +203,37 @@ stroke: #14CF93;
   align-items: center;
   justify-content: center;
   height: auto;
-  width: 80%;
+  width: 100%;
   /* background-color: yellow; */
   /* height: 300px; */
 
 }
-
+#Tech-Stack{
+  align-items: center;
+  justify-content: center;
+display: flex;
+flex-direction: column;
+}
+#Tech-Stack h2{
+  font-size: 2vw;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 1vw;
+}
+.tech-icon{
+  align-items: center;
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* justify-content: flex-end; */
+  /* flex-direction: row; */
+}
+.tech-icon>svg{
+  margin: 0.5vw 1vw;
+  height: 7vh;
+  fill: #333;
+}
 
 #work{
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
