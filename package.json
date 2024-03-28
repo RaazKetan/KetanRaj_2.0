@@ -1,6 +1,10 @@
 {
+  "scripts": {
+    "develop": "sass main.scss main.css -w"
+  },
   "dependencies": {
     "gsap": "^3.12.3",
-    "locomotive-scroll": "^4.1.4"
+    "locomotive-scroll": "^4.1.4",
+    "sass": "^1.72.0"
   }
 }
