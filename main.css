@@ -215,52 +215,104 @@ polyline {
   font-style: italic;
 }
 
-#imgrig {
-  position: relative;
-  display: flex;
+.techstack {
+  padding: 2rem;
+  color: #ffffff;
+  background: #0d1117;
+}
+
+.what {
+  margin-bottom: 2.5rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+}
+
+.what_extended {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.overall_tech, .backend, .database, .devops {
+  padding: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  background: #161b22;
+}
+
+.html, .css, .tailwind, .javascript, .typescript, .reactjs, .nextjs, .nodejs, .nextauth, .mysql, .git, .aws {
+  display: inline-flex;
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
   align-items: center;
-  justify-content: center;
-  height: auto;
-  width: 100%;
-  z-index: 2;
-  /* background-color: yellow; */
-  /* height: 300px; */
+  border-radius: 9999px;
+  border-width: 1px;
+  border-color: transparent;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
-#Tech-Stack {
-  align-items: center;
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
+.html:hover {
+  background: #000;
 }
 
-#Tech-Stack h2 {
-  font-size: 2vw;
-  font-weight: 800;
-  color: #333;
-  margin-bottom: 1vw;
+.css:hover {
+  background: #000;
 }
 
-.tech-icon {
-  align-items: center;
-  width: 30%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* justify-content: flex-end; */
-  /* flex-direction: row; */
+.tailwind {
+  transition-duration: 300ms;
+  background: #06b6d4;
 }
 
-.tech-icon > svg {
-  margin: 0.5vw 1vw;
-  width: 20%;
-  fill: #333;
-  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+.javascript {
+  background: #eab308;
 }
 
-.tech-icon > svg:hover {
-  width: 21%;
-  fill: #14cf93;
+.reactjs, .nextjs {
+  background: #2563eb;
+}
+
+.nodejs {
+  background: #22c55e;
+}
+
+.nextauth {
+  background: #000;
+}
+
+.mysql {
+  background: #00758f;
+}
+
+.aws {
+  background: #ff9900;
+}
+
+.html:hover,
+.css:hover,
+.tailwind:hover,
+.javascript:hover,
+.typescript:hover,
+.reactjs:hover,
+.nextjs:hover,
+.nodejs:hover,
+.nextauth:hover,
+.mysql:hover,
+.git:hover,
+.aws:hover {
+  background-color: #14cf93;
 }
 
 #work {
