@@ -218,6 +218,7 @@ polyline {
 
 .techstack {
   padding: 2rem;
+  background: linear-gradient(180deg, #fcfaf8 0%, rgba(20, 207, 148, 0.5058823529) 100%);
   color: #ffffff;
 }
 
@@ -324,6 +325,7 @@ polyline {
 }
 
 #work {
+  padding-top: 1.2rem;
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
   position: relative;
   /* height: 300vh; */
@@ -333,8 +335,7 @@ polyline {
 
 #work::before {
   content: "";
-  top: -75px;
-  left: -10px;
+  top: -85px;
   position: absolute;
   transform: rotate(-180deg);
   width: 100%;
@@ -393,10 +394,58 @@ polyline {
   stroke: rgba(79, 79, 79, 0.3960784314);
 }
 
-#images {
-  /* width: 100%; */
-  height: 100vh;
-  position: relative;
+.project {
+  padding: 2rem;
+}
+
+.project_item {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  transform: translateX(0);
+  transition: transform 0.5s ease-in-out;
+}
+
+.discord, .spotify, .dalle, .amazon {
+  border-radius: 0.5rem;
+  border-width: 1px;
+  color: #ffffff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  background: #5865F2;
+}
+
+.discord_sec, .spotify_sec, .dalle_sec, .amazon_sec {
+  display: flex;
+  padding: 1.5rem;
+  margin-top: 0.375rem;
+  flex-direction: column;
+}
+
+.discord_info, .spotify_info, .dalle_info, .amazon_info {
+  padding: 1.5rem;
+}
+
+.project_title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.project_techstack {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.nav-button {
+  background-color: #5865F2;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 10px;
 }
 
 /* footer */
