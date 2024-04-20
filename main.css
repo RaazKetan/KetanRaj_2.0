@@ -330,7 +330,6 @@ polyline {
   position: relative;
   /* height: 300vh; */
   color: #333;
-  background-color: #f2f2f2;
 }
 
 #work::before {
@@ -402,26 +401,40 @@ polyline {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 1rem;
-  transform: translateX(0);
-  transition: transform 0.5s ease-in-out;
 }
 
-.discord, .spotify, .dalle, .amazon {
+.project_item > a {
+  text-decoration: none;
+}
+
+.project_img {
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.ReadmeEditor, .LuxeLens, .Codee, .BudgetBud {
   border-radius: 0.5rem;
   border-width: 1px;
   color: #ffffff;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  background: #5865F2;
+  background: #333;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 
-.discord_sec, .spotify_sec, .dalle_sec, .amazon_sec {
+.ReadmeEditor:hover, .LuxeLens:hover, .Codee:hover, .BudgetBud:hover {
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project_sec {
   display: flex;
   padding: 1.5rem;
   margin-top: 0.375rem;
   flex-direction: column;
 }
 
-.discord_info, .spotify_info, .dalle_info, .amazon_info {
+.project_info {
   padding: 1.5rem;
 }
 
@@ -439,18 +452,9 @@ polyline {
   line-height: 1.25rem;
 }
 
-.nav-button {
-  background-color: #5865F2;
-  color: #ffffff;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  margin: 10px;
-}
-
 /* footer */
 #footer {
-  margin-top: 10vw;
+  margin-top: 5vw;
   padding: 0;
   /* height: 100vh; */
   display: flex;
