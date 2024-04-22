@@ -85,35 +85,6 @@ function locoIntialize() {
   });
 }
 
-function cardHoverEffect() {
-  document.querySelectorAll(".cnt").forEach(function (cnt) {
-    var showingImage;
-    cnt.addEventListener("mousemove", function (dets) {
-      // console.log(dets.target.dataset.index);
-      document.querySelector("#cursor").children[
-        dets.target.dataset.index
-      ].style.opacity = 1;
-      showingImage = dets.target;
-
-      document.querySelector("#cursor").children[
-        dets.target.dataset.index
-      ].style.transform = `translate(${dets.clientX}px, ${dets.clientY}px)`;
-
-      // console.log(dets.clientX, dets.clientY);
-
-      showingImage.style.filter = "grayscale(1)";
-      document.querySelector("#work").style.backgroundColor =
-        "#" + dets.target.dataset.color;
-    });
-    cnt.addEventListener("mouseleave", function (dets) {
-      document.querySelector("#cursor").children[
-        showingImage.dataset.index
-      ].style.opacity = 0;
-      showingImage.style.filter = "grayscale(0)";
-      document.querySelector("#work").style.backgroundColor = "#fff";
-    });
-  });
-}
 
 // Function to check if the device is a mobile device
 // function isMobileDevice() {
@@ -171,91 +142,12 @@ function slideRight() {
 }
 
 
-// a8467ed56084e3d8eb218723eea8883c
-var map;
-var zoomLevel = 10;
-var zoomCount = 0;
-
-function loadMapScenario() {
-  var indiaLocation = new Microsoft.Maps.Location(29.140036, 79.501166); // Coordinates for India
-
-  // Initialize the map
-  map = new Microsoft.Maps.Map("#bingMap", {
-    center: indiaLocation,
-    zoom: zoomLevel,
-    disablePanning: true,
-    disableZooming: true,
-    showLocateMeButton: false,
-    showMapTypeSelector: false,
-    showZoomButtons: false,
-    disableMouseInput: true,
-    showScalebar: false,
-  });
-
-  // Zoom control buttons
-  var zoomInButton = document.getElementById("zoomIn");
-  var zoomOutButton = document.getElementById("zoomOut");
-
-  // Zoom In functionality
-  zoomInButton.onclick = function () {
-    if (zoomCount < 2) {
-      // Allows for 3 distinct zoom levels
-      zoomCount++;
-      updateZoomLevel();
-    }
-  };
-
-  // Zoom Out functionality
-  zoomOutButton.onclick = function () {
-    if (zoomCount > -2) {
-      // Allows for 3 distinct zoom levels
-      zoomCount--;
-      updateZoomLevel();
-    }
-  };
-
-  // Update the zoom level on the map
-  function updateZoomLevel() {
-    var newZoomLevel = calculateZoomLevel();
-    // Trigger the map to update its zoom level with animation
-    map.setView({ zoom: newZoomLevel, animate: true });
-
-    // Adjust the timing or add additional animations if needed
-    // This timeout is adjusted to match the expected duration of the map's zoom animation
-    setTimeout(updateZoomButtons, 500); // Adjust this delay based on the actual animation time
-  }
-
-  function calculateZoomLevel() {
-    // Smoother transitions between zoom levels
-    switch (zoomCount) {
-      case 1:
-        return 12; // Slightly closer
-      case 0:
-        return 10; // Default zoom level
-      case -1:
-        return 7; // Slightly further away
-      case -2:
-        return 3; // More zoomed out
-      default:
-        return 10; // Default to initial zoom level
-    }
-  }
-
-  // Update the state of the zoom buttons
-  function updateZoomButtons() {
-    // Disable or enable buttons based on zoomCount
-    zoomInButton.disabled = zoomCount >= 0;
-    zoomOutButton.disabled = zoomCount <= -2;
-
-    // Optionally, hide or show the buttons at the ends
-    zoomOutButton.style.display = zoomCount <= -2 ? "none" : "block";
-    zoomInButton.style.display = zoomCount >= 0 ? "none" : "block";
-  }
-
-  // Initialize button states and map view
-  updateZoomButtons();
-  updateZoomLevel();
+function isMobileDevice() {
+  return window.innerWidth <= 768; // Adjust the width as per your mobile device breakpoints
 }
+
+gsap.registerPlugin(ScrollTrigger);
+
 window.addEventListener("load", () => {
   const titles = document.querySelectorAll(".title-gsap");
 
@@ -282,6 +174,7 @@ window.addEventListener("load", () => {
     );
   });
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   var grid = document.querySelector(".grid");
@@ -389,12 +282,33 @@ function initAnimationsOnMobile() {
     });
   }
 }
+function initMarqueeAnimation() {
+  const animationConfig = {
+    duration: 5,
+    x: "-125%",
+    repeat: -1,
+    ease: "linear",
+  };
+
+  const marqueeContainer = document.querySelector(".js-btn-loop");
+  gsap.to(marqueeContainer, {
+    ...animationConfig,
+  });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Other code ...
+
+  // Call the function to initialize marquee animation
+  initMarqueeAnimation();
+});
 
 revealToSpan();
 loaderAnimation();
 animateSVG();
 locoIntialize();
 cardHoverEffect();
+initAnimationsOnMobile();
 
 //
 //
