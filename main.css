@@ -884,6 +884,10 @@ body {
   color: #fff;
 }
 
+#feat_work {
+  margin-top: 2rem;
+}
+
 .grid {
   --gap: 1em;
   --columns: 3;
@@ -902,14 +906,10 @@ body {
 }
 
 .content1.featured {
-  grid-column: span 2;
+  grid-column: auto;
 }
 
 :root {
-  --ff-primary: basic-sans, sans-serif;
-  --clr-primary: #ee6352;
-  --clr-body: #333;
-  --clr-bg: #ddd;
   --spacer: 1rem;
 }
 
@@ -956,6 +956,7 @@ body {
 /* Responsive adjustments for mobile screens */
 @media screen and (max-width: 480px) {
   .grid {
+    grid-template-columns: 1fr;
     margin: 20px; /* Consistent margin for mobile screens */
   }
 }
@@ -1077,6 +1078,9 @@ body {
   .left-image-section,
   .left-image-section1 {
     height: 450px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
 .image-wrapper,
@@ -1229,7 +1233,7 @@ body {
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
   .grid {
-    --columns: 2; /* Reduce the number of columns on smaller screens */
+    grid-template-columns: 1; /* Reduce the number of columns on smaller screens */
   }
   .featured,
   .content,
@@ -1258,7 +1262,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .grid {
-    --columns: 1; /* Only one column for very small screens */
+    grid-template-columns: 1; /* Only one column for very small screens */
   }
   .frame .grid > .content:last-child {
     margin-bottom: var(--gap); /* Add back margin if needed */
@@ -1269,6 +1273,7 @@ body {
 @media screen and (max-width: 480px) {
   .grid {
     margin: 20px; /* Consistent margin for mobile screens */
+    grid-template-columns: 1fr;
   }
 }
 /*timeline frame to give spacing*/

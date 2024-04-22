@@ -192,30 +192,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  const hoverButton = document.getElementById("hoverButton");
-  const futureVideo = document.getElementById("futureVideo");
-
-  hoverButton.addEventListener("mouseover", function () {
-    gsap.to("#futureVideo", {
-      opacity: 1,
-      duration: 1.5,
-      ease: Power4,
-    });
-    futureVideo.play();
-  });
-
-  hoverButton.addEventListener("mouseleave", function () {
-    gsap.to("#futureVideo", {
-      opacity: 0,
-      duration: 1.5,
-      ease: Power4,
-    });
-    futureVideo.pause();
-    futureVideo.currentTime = 0; // Reset video to the beginning
-  });
-});
-
 // images aniamtion
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -309,8 +285,3 @@ animateSVG();
 locoIntialize();
 cardHoverEffect();
 initAnimationsOnMobile();
-
-//
-//
-//
-//
