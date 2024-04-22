@@ -1149,40 +1149,6 @@ body {
   /* Your hover effect styles for the overlay */
 }
 
-/* maps zoom in and out */
-#zoomIn,
-#zoomOut {
-  background: rgb(255, 255, 255);
-  width: 42px;
-  height: 42px;
-  border-radius: 99px;
-  position: absolute;
-  bottom: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-  will-change: transform, opacity;
-  z-index: 1;
-  border: 2px solid rgb(158, 183, 138); /* Solid border color */
-}
-
-#zoomIn {
-  left: 16px;
-}
-
-#zoomOut {
-  right: 16px;
-}
-
-/* Hover effect for zoom buttons */
-#zoomIn:hover,
-#zoomOut:hover {
-  transform: scale(1.1); /* Slightly increase the size */
-  opacity: 0.8; /* Slightly transparent */
-  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
-}
-
 /* styles.css */
 /* Initial state of the image with smooth transition */
 #centeredImage {
