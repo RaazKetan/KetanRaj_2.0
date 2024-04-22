@@ -241,7 +241,10 @@ polyline {
   gap: 1rem;
 }
 
-.overall_tech, .backend, .database, .devops {
+.overall_tech,
+.backend,
+.database,
+.devops {
   padding: 1.5rem;
   margin-top: 1rem;
   border-radius: 0.5rem;
@@ -249,7 +252,19 @@ polyline {
   overflow: hidden;
 }
 
-.html, .css, .tailwind, .javascript, .typescript, .reactjs, .nextjs, .nodejs, .nextauth, .mysql, .git, .aws, .firebase {
+.html,
+.css,
+.tailwind,
+.javascript,
+.typescript,
+.reactjs,
+.nextjs,
+.nodejs,
+.nextauth,
+.mysql,
+.git,
+.aws,
+.firebase {
   display: inline-flex;
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
@@ -288,7 +303,8 @@ polyline {
   background: #eab308;
 }
 
-.reactjs, .nextjs {
+.reactjs,
+.nextjs {
   background: #2563eb;
 }
 
@@ -414,7 +430,10 @@ polyline {
      object-fit: cover;
 }
 
-.ReadmeEditor, .LuxeLens, .Codee, .BudgetBud {
+.ReadmeEditor,
+.LuxeLens,
+.Codee,
+.BudgetBud {
   border-radius: 0.5rem;
   border-width: 1px;
   color: #ffffff;
@@ -423,7 +442,10 @@ polyline {
   transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
 
-.ReadmeEditor:hover, .LuxeLens:hover, .Codee:hover, .BudgetBud:hover {
+.ReadmeEditor:hover,
+.LuxeLens:hover,
+.Codee:hover,
+.BudgetBud:hover {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
@@ -860,4 +882,595 @@ body {
 .button button:hover {
   background: #ababab;
   color: #fff;
+}
+
+.grid {
+  --gap: 1em;
+  --columns: 3;
+  max-width: 1136px;
+  margin: 0 auto;
+  display: grid; /* Use grid layout */
+  grid-template-columns: repeat(var(--columns), 1fr);
+  gap: var(--gap);
+  align-items: start; /* Prevents items from stretching vertically */
+}
+
+.grid > * {
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+  margin-bottom: var(--gap);
+}
+
+.content1.featured {
+  grid-column: span 2;
+}
+
+:root {
+  --ff-primary: basic-sans, sans-serif;
+  --clr-primary: #ee6352;
+  --clr-body: #333;
+  --clr-bg: #ddd;
+  --spacer: 1rem;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* think of future */
+.flow > * + * {
+  margin-top: var(--flow-space, var(--spacer));
+}
+
+.content,
+.content1 {
+  position: relative;
+  background: #f5f7f5;
+  border-radius: 20px;
+  height: auto; /* Ensures the content does not stretch beyond its natural height */
+  overflow: hidden; /* Clips any overflowing content */
+}
+
+.content {
+  padding: 2em;
+}
+
+/* Mobile-first styles (default styles are for small screens) */
+.content,
+.content1 {
+  width: 100%; /* Take up full width on mobile */
+}
+
+/* Larger screen adjustments */
+@media (min-width: 768px) {
+  .content,
+  .content1 {
+    width: calc((100% - 32px) / 3); /* Return to 3-column layout */
+  }
+  .featured {
+    width: calc((100% - 30px) / 3 * 2 + 16px); /* Featured items span two columns */
+  }
+}
+/* Responsive adjustments for mobile screens */
+@media screen and (max-width: 480px) {
+  .grid {
+    margin: 20px; /* Consistent margin for mobile screens */
+  }
+}
+/*timeline frame to give spacing*/
+.content .content-container {
+  height: 438px;
+  justify-content: space-between;
+  align-self: stretch;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+/*timeline years spacing */
+.content .timeline-event {
+  gap: 28px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+/* Music */
+.content1 {
+  position: relative; /* Makes it the reference point for its absolutely positioned children */
+}
+
+.skillsbox h2 {
+  position: absolute; /* Positions it absolutely within .content1 */
+  top: 32px; /* Aligns to the top of the .content1 container */
+  left: 32px; /* Aligns to the left of the .content1 container */
+  color: white; /* Sets the text color to white */
+}
+
+.music {
+  display: flex;
+  flex-direction: column;
+  height: 359px;
+  align-items: flex-start;
+  padding: 37px 38px;
+  position: relative;
+  background-size: cover;
+  background-position: 50% 50%;
+  justify-content: space-between; /* Added this line */
+}
+
+.music .last-played {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.music .frame {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.text-wrapper-31 {
+  display: flex; /* Enables flexbox */
+  align-items: center; /* Aligns items vertically in the center */
+  gap: 8px; /* Adjust this value for space between the GIF and text */
+}
+
+.spotify-gif {
+  width: 32px; /* Set the width of the GIF */
+  height: auto; /* Maintain aspect ratio of the GIF */
+}
+
+.spotify-link {
+  text-decoration: none; /* Removes underline from links */
+}
+
+/* images container */
+.flex-container {
+  display: flex;
+  margin: 96px;
+  flex-direction: row;
+}
+
+.left-image-section,
+.left-image-section1 .left-image-section2 {
+  position: relative;
+  overflow: hidden;
+  margin-right: 64px;
+  border-radius: 16px;
+  width: 100%;
+}
+
+.left-image-section {
+  height: 500px;
+}
+
+.left-image-section1 {
+  height: 641px;
+}
+
+.left-image-section2 {
+  height: 368px;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 767px) {
+  .left-image-section,
+  .left-image-section1 {
+    height: 450px;
+  }
+}
+.image-wrapper,
+.image-wrapper1 {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.image-wrapper img,
+.image-wrapper1 img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 16px;
+}
+
+.left-image-section:hover .image-wrapper,
+.left-image-section1:hover .image-wrapper1 {
+  transform: scale(1.1);
+}
+
+.image-overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  border-radius: 16px;
+}
+
+.left-image-section:hover .image-overlay-container,
+.left-image-section1:hover .image-overlay-container {
+  opacity: 1;
+}
+
+.overlay-gradient {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15));
+}
+
+.image-wrapper1 img,
+.image-wrapper img {
+  display: none; /* Hide all images initially */
+  position: absolute; /* Overlay images on top of each other */
+  top: 0;
+  transition: opacity 0.5s; /* Smooth transition for the fade effect */
+}
+
+.image-wrapper1 img:first-child,
+.image-wrapper img:first-child {
+  display: block; /* Show the first image by default */
+}
+
+.content1:hover .image-wrapper img,
+.content1:hover .image-wrapper1 img {
+  display: block; /* Ensure images are displayed during hover */
+}
+
+/* Optional: Add some styles for the hover effect */
+.content1:hover .image-overlay-container .overlay-gradient,
+.content1.featured:hover .image-overlay-container .overlay-gradient {
+  /* Your hover effect styles for the overlay */
+}
+
+/* maps zoom in and out */
+#zoomIn,
+#zoomOut {
+  background: rgb(255, 255, 255);
+  width: 42px;
+  height: 42px;
+  border-radius: 99px;
+  position: absolute;
+  bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  will-change: transform, opacity;
+  z-index: 1;
+  border: 2px solid rgb(158, 183, 138); /* Solid border color */
+}
+
+#zoomIn {
+  left: 16px;
+}
+
+#zoomOut {
+  right: 16px;
+}
+
+/* Hover effect for zoom buttons */
+#zoomIn:hover,
+#zoomOut:hover {
+  transform: scale(1.1); /* Slightly increase the size */
+  opacity: 0.8; /* Slightly transparent */
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+}
+
+/* styles.css */
+/* Initial state of the image with smooth transition */
+#centeredImage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  /* Ensure the image is centered with translate, this remains constant */
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 128px;
+  height: 128px;
+  /* Apply a smooth transition effect to transformations */
+  transition: transform 0.5s ease;
+}
+
+/* Hover effect on the entire content section */
+.content1:hover #centeredImage {
+  /* Combine scaling and rotation with the existing translation */
+  transform: translate(-50%, -50%) scale(1.2) rotate(5deg);
+}
+
+.bm_bottomRightOverlay {
+  display: none !important;
+}
+
+.bm_bottomLeftOverlay {
+  display: none !important;
+}
+
+/* Contact us Section links button */
+.content-container {
+  display: flex;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  position: relative;
+  background-color: #f5f7f5;
+  overflow: hidden;
+}
+
+.content1 .frame-22 {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  position: relative;
+  flex: 0 0 auto;
+}
+
+.link {
+  display: inline-flex;
+  justify-content: center;
+  padding: 17px;
+  position: relative;
+  background-color: rgba(141, 141, 141, 0.1019607843);
+  border-radius: 9999px;
+  height: 56px;
+  width: 56px;
+}
+
+.link img {
+  /* Targeting the images inside .link */
+  position: relative;
+  width: 22px;
+  height: 22px;
+  transition: filter 0.3s; /* Smooth transition for the filter effect */
+}
+
+.link:hover img {
+  /* Applying filter when .link is hovered */
+  filter: brightness(1) invert(1); /* Makes the image black */
+}
+
+/* Base styles */
+/* ... existing styles ... */
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .grid {
+    --columns: 2; /* Reduce the number of columns on smaller screens */
+  }
+  .featured,
+  .content,
+  .content1 {
+    width: 100%; /* Full width for smaller screens */
+  }
+  .left-image-section,
+  .left-image-section1,
+  .left-image-section2 {
+    margin-right: 0; /* Remove margin for smaller screens */
+  }
+  .flex-container {
+    flex-direction: column; /* Stack elements vertically on smaller screens */
+  }
+  .div-header .heading,
+  .div-header .p-subtitle {
+    padding: 0 20px; /* Adjust padding */
+  }
+  .h1,
+  .h2,
+  .h3,
+  .p {
+    font-size: smaller; /* Adjust font size */
+  }
+  /* Add more responsive adjustments as needed */
+}
+@media screen and (max-width: 480px) {
+  .grid {
+    --columns: 1; /* Only one column for very small screens */
+  }
+  .frame .grid > .content:last-child {
+    margin-bottom: var(--gap); /* Add back margin if needed */
+  }
+  /* Further reduce font sizes and adjust paddings/margins as needed */
+}
+/* Responsive adjustments for mobile screens */
+@media screen and (max-width: 480px) {
+  .grid {
+    margin: 20px; /* Consistent margin for mobile screens */
+  }
+}
+/*timeline frame to give spacing*/
+.content .content-container {
+  height: 438px;
+  justify-content: space-between;
+  align-self: stretch;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  scroll-snap-align: start;
+}
+
+/*timeline years spacing */
+.content .frame-222 {
+  gap: 28px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+}
+
+.slider-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 300%; /* Adjust based on the number of slides */
+}
+
+.slide {
+  flex: 0 0 100%;
+  width: 100%; /* Each slide is 100% of the container width */
+}
+
+/* Initially hide all slides */
+.slide:not(.active) {
+  display: none;
+}
+
+.slider-dots {
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot.active {
+  background-color: #717171;
+}
+
+.post-container {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+}
+
+.avatar {
+  width: 46px;
+  height: 46px;
+  margin-right: 10px; /* Adjust spacing between image and user info */
+}
+
+.user-info {
+  flex: 1; /* Take up remaining space */
+}
+
+/* Additional styles to ensure user info is on the right */
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start (left) */
+}
+
+.testimonials-container {
+  position: relative;
+}
+
+.slider-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 60px; /* Adjust as needed */
+  z-index: 1;
+  cursor: pointer;
+}
+
+.slider-arrow.left {
+  left: 0;
+  background: linear-gradient(to right, rgba(245, 245, 247, 0.5) 0%, transparent 100%);
+}
+
+.slider-arrow.right {
+  right: 0;
+  background: linear-gradient(to left, rgba(245, 245, 247, 0.5) 0%, transparent 100%);
+}
+
+.slider-arrow.left:hover {
+  background: linear-gradient(to right, rgba(207, 207, 207, 0.7) 0%, transparent 100%);
+}
+
+.slider-arrow.right:hover {
+  background: linear-gradient(to left, rgba(207, 207, 207, 0.7) 0%, transparent 100%);
+}
+
+.slider-arrow.left:active {
+  background: linear-gradient(to right, rgba(245, 245, 247, 0.9) 0%, transparent 100%);
+}
+
+.slider-arrow.right:active {
+  background: linear-gradient(to left, rgba(245, 245, 247, 0.9) 0%, transparent 100%);
+}
+
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Adjust spacing as needed */
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: #bbb;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #333;
+}
+
+/* Define the animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Start slightly below and move up */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Move to original position */
+  }
+}
+/* Apply animation to .animate class on mobile devices */
+@media (max-width: 767px) {
+  .animate {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+}
+.skillsbox {
+  height: 500px; /* Set the height of the skillsbox */
+  border: 1px solid #ddd; /* Optional: Adds a border to the skillsbox */
+  position: relative;
+  overflow: hidden; /* Ensures the canvas does not overflow the container */
 }/*# sourceMappingURL=main.css.map */
