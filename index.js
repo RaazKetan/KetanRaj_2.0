@@ -86,12 +86,6 @@ function locoIntialize() {
 }
 
 
-// Function to check if the device is a mobile device
-// function isMobileDevice() {
-//   return window.innerWidth <= 768; // Adjust the width as per your mobile device breakpoints
-// }
-
-// JavaScript for Testimonials Slider
 document.addEventListener("DOMContentLoaded", (event) => {
   const slides = document.querySelectorAll(".slide");
   const dots = document.querySelectorAll(".dot");
@@ -141,11 +135,6 @@ function slideRight() {
   showSlide(newIndex);
 }
 
-
-function isMobileDevice() {
-  return window.innerWidth <= 768; // Adjust the width as per your mobile device breakpoints
-}
-
 gsap.registerPlugin(ScrollTrigger);
 
 window.addEventListener("load", () => {
@@ -175,22 +164,6 @@ window.addEventListener("load", () => {
   });
 });
 
-
-document.addEventListener("DOMContentLoaded", function () {
-  var grid = document.querySelector(".grid");
-
-  var msnry = new Masonry(grid, {
-    itemSelector: ".content, .content1",
-    columnWidth: ".content",
-    percentPosition: true,
-    gutter: 16,
-  });
-
-  // Ensure all images are loaded before applying the layout
-  imagesLoaded(grid).on("always", function () {
-    msnry.layout();
-  });
-});
 
 // images aniamtion
 
@@ -233,51 +206,24 @@ document.addEventListener("DOMContentLoaded", function () {
   initHoverEffect(".content1.featured");
 });
 
-// Function to initialize GSAP animations only on mobile
-function initAnimationsOnMobile() {
-  // Check if the screen width is less than or equal to 768px (considered as mobile view)
-  if (window.innerWidth <= 768) {
-    // Get all content containers
-    const contentContainers = document.querySelectorAll(".content, .content1");
+function checkScreenSize() {
+  // Get the current viewport width
+  var viewportWidth = window.innerWidth;
 
-    // Loop through each container and define GSAP animations
-    contentContainers.forEach((container, index) => {
-      // Define the animation for each container
-      const tl = gsap.timeline({
-        scrollTrigger: {
-          trigger: container,
-          start: "top 95%", // Change the percentage value to adjust the start position
-          end: "bottom 95%", // Change the percentage value to adjust the end position
-          markers: false, // Optional: Shows markers for debugging
-          toggleActions: "restart none none reverse", // Restart animation when reaching start, pause when leaving, no action when reaching end, reverse when scrolling up
-        },
-      });
-
-      // Add animation properties to the timeline
-      tl.from(container, { y: 100, duration: 1 }); // Example animation, change properties as needed
-    });
+  console.log(viewportWidth);
+ 
+  // Check if the viewport width is less than 768 pixels
+  if (viewportWidth < 768) {
+     // Show an alert if the condition is true
+     alert("Media queries for mobile devices and tablets are not yet implemented. Please view this page on a desktop or laptop for the best experience. Thank you!"); 
   }
-}
-function initMarqueeAnimation() {
-  const animationConfig = {
-    duration: 5,
-    x: "-125%",
-    repeat: -1,
-    ease: "linear",
-  };
+ }
+ 
+ // Call the function to check the screen size
+ checkScreenSize();
 
-  const marqueeContainer = document.querySelector(".js-btn-loop");
-  gsap.to(marqueeContainer, {
-    ...animationConfig,
-  });
-}
 
-document.addEventListener("DOMContentLoaded", function () {
-  // Other code ...
 
-  // Call the function to initialize marquee animation
-  initMarqueeAnimation();
-});
 
 revealToSpan();
 loaderAnimation();
